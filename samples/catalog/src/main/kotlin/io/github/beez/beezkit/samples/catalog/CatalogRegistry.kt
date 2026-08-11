@@ -12,12 +12,14 @@ internal val beezKitCatalogEntries: List<BeezKitCatalogEntry> = listOf(
         status = BeezKitModuleStatus.Experimental,
         content = { ThrottleCatalogSample() },
     ),
-    plannedEntry(
+    BeezKitCatalogEntry(
         id = "stacktrace",
         modulePath = ":toolkit:stacktrace",
         title = "Stack Trace",
         description = "값과 함께 호출 지점까지의 유효한 스택 프레임을 기록합니다.",
         category = BeezKitCatalogCategory.Toolkit,
+        status = BeezKitModuleStatus.Experimental,
+        content = { StackTraceCatalogSample() },
     ),
     BeezKitCatalogEntry(
         id = "measure",

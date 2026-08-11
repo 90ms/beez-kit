@@ -4,14 +4,14 @@
 
 BeezKit은 호스트 앱에 작은 유틸리티, 진단 도구, 재사용 가능한 UI 컴포넌트를 최소한의 설정으로 추가하기 위한 Compose 중심 Android 툴킷입니다. 공개 API 타입에는 `BeezKit` 접두사를, Modifier 확장 함수에는 간결한 `bk` 접두사를 사용합니다.
 
-> 현재 상태: 초기 개발 단계입니다. 쓰로틀링과 함수 시간 측정 모듈은 실험적으로 사용할 수 있으며 나머지 모듈은 기본 골격만 준비되어 있습니다.
+> 현재 상태: 초기 개발 단계입니다. 쓰로틀링, 스택 트레이스와 함수 시간 측정 모듈은 실험적으로 사용할 수 있으며 나머지 모듈은 기본 골격만 준비되어 있습니다.
 
 ## 제공 라이브러리
 
 | 분류 | 라이브러리 | 아티팩트 | 상태 | 상세 스펙 |
 | --- | --- | --- | --- | --- |
 | 툴킷 | 쓰로틀링 | `io.github.beez:throttle` | 실험적 | [상세](docs/modules/throttle.md) |
-| 툴킷 | 스택 트레이스 | `io.github.beez:stacktrace` | 예정 | [상세](docs/modules/stacktrace.md) |
+| 툴킷 | 스택 트레이스 | `io.github.beez:stacktrace` | 실험적 | [상세](docs/modules/stacktrace.md) |
 | 툴킷 | 함수 시간 측정 | `io.github.beez:measure` | 실험적 | [상세](docs/modules/measure.md) |
 | 디버그 | Inspector Core | `io.github.beez:inspector-core` | 예정 | [상세](docs/modules/inspector.md) |
 | 디버그 | Inspector Network | `io.github.beez:inspector-network` | 예정 | [상세](docs/modules/inspector.md#network-collector) |
@@ -37,7 +37,7 @@ Modifier.bkSkeleton(visible = isLoading)
 Modifier.bkTooltip("여기에서 프로필을 수정할 수 있어요")
 ```
 
-쓰로틀링과 함수 시간 측정 예제는 현재 사용할 수 있습니다. 나머지 코드는 목표 API이며 해당 모듈이 구현되기 전까지 컴파일되지 않습니다.
+쓰로틀링, 스택 트레이스와 함수 시간 측정 예제는 현재 사용할 수 있습니다. 나머지 코드는 목표 API이며 해당 모듈이 구현되기 전까지 컴파일되지 않습니다.
 
 ## 프로젝트 구조
 
