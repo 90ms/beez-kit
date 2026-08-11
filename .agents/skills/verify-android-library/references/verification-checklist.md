@@ -22,6 +22,15 @@
 - Semantics, TalkBack, action timing, and reduced motion are covered.
 - Large-list behavior avoids per-item unbounded work.
 
+## Catalog
+
+- Every public module has a discoverable registry entry and sample dependency.
+- Implemented entries invoke the real public API and expose observable results.
+- Planned entries do not claim nonexistent behavior.
+- Relevant options, edge states, lifecycle behavior, and accessibility are demonstrable.
+- README and catalog maturity states agree.
+- Catalog-only Material 3 types and demo state do not leak into published libraries.
+
 ## Packaging
 
 - Minimal dependencies and correct `api`/`implementation` usage.
@@ -33,5 +42,4 @@
 - Unit tests cover boundaries, concurrency, cancellation, and errors.
 - Catalog demonstrates visual public APIs.
 - Specs and README match implementation.
-- Build, lint, tests, minified consumer sample, and artifact size are checked before Stable.
-
+- GitHub Actions build, lint, tests, minified consumer sample, and artifact size are checked before Stable.

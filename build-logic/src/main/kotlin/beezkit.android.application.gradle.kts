@@ -5,12 +5,12 @@ plugins {
 
 extensions.configure<com.android.build.api.dsl.ApplicationExtension> {
     namespace = "io.github.beez.beezkit.samples.catalog"
-    compileSdk = 37
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "io.github.beez.beezkit.samples.catalog"
         minSdk = 23
-        targetSdk = 37
+        targetSdk = 36
         versionCode = 1
         versionName = "0.1.0"
     }
@@ -22,4 +22,3 @@ extensions.configure<com.android.build.api.dsl.ApplicationExtension> {
         targetCompatibility = JavaVersion.VERSION_17
     }
 }
-

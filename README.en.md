@@ -50,7 +50,7 @@ docs/modules/  Canonical module specifications
 .agents/skills Repository-local Codex workflows
 ```
 
-See [architecture](docs/architecture.md) for module boundaries and design rules.
+See [architecture](docs/architecture.md) for module boundaries and design rules, and the [catalog specification](docs/sample-catalog.md) for sample registration and screen requirements.
 
 ## Build
 
@@ -61,4 +61,3 @@ Install Android SDK 37, use JDK 17 or newer, and run:
 ```
 
 The catalog application is available at `:samples:catalog`.
-

@@ -3,7 +3,7 @@ plugins {
 }
 
 extensions.configure<com.android.build.api.dsl.LibraryExtension> {
-    compileSdk = 37
+    compileSdk = 36
 
     defaultConfig {
         minSdk = 23
@@ -25,4 +25,3 @@ extensions.configure<com.android.build.api.dsl.LibraryExtension> {
         }
     }
 }
-
