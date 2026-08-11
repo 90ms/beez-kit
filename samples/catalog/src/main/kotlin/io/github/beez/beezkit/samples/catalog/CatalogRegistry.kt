@@ -3,12 +3,14 @@ package io.github.beez.beezkit.samples.catalog
 import androidx.compose.material3.Text
 
 internal val beezKitCatalogEntries: List<BeezKitCatalogEntry> = listOf(
-    plannedEntry(
+    BeezKitCatalogEntry(
         id = "throttle",
         modulePath = ":toolkit:throttle",
         title = "Throttle",
         description = "Compose에서 빠르게 반복되는 입력을 제한하는 Modifier를 제공합니다.",
         category = BeezKitCatalogCategory.Toolkit,
+        status = BeezKitModuleStatus.Experimental,
+        content = { ThrottleCatalogSample() },
     ),
     plannedEntry(
         id = "stacktrace",

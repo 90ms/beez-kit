@@ -1,0 +1,23 @@
+name: Validate branch name
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Follow GitHub Flow branch convention
+    runs-on: ubuntu-latest
+    steps:
+      - name: Validate branch name
+        env:
+          BRANCH_NAME: ${{ github.head_ref }}
+        run: |
+          if [[ ! "$BRANCH_NAME" =~ ^(feature|fix|hotfix|refactor|docs|test|chore|ci|release|dependabot)/[a-z0-9]+(-[a-z0-9]+)*$ ]]; then
+            echo "Invalid branch: $BRANCH_NAME"
+            echo "Use <type>/<kebab-case>, for example feature/throttle or fix/toast-offset."
+            exit 1
+          fi
