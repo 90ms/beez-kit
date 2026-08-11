@@ -21,6 +21,8 @@
 
 ## Change workflow
 
+- Follow GitHub Flow with `<type>/<kebab-case>` branch names. Allowed types are `feature`, `fix`, `hotfix`, `refactor`, `docs`, `test`, `chore`, `ci`, and `release`; reserve `dependabot` for automation.
+- Branch from an up-to-date `main`, open a pull request, and merge only after required GitHub Actions checks pass.
 - Read `docs/architecture.md` and the affected module specification before implementation.
 - Update the module specification and root README when public API, behavior, status, or artifact inventory changes.
 - Add or update a discoverable `samples/catalog` entry for every public module change, including non-visual utilities.

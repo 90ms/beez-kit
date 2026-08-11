@@ -4,13 +4,13 @@
 
 BeezKit is a Compose-first Android toolkit for adding small utilities, diagnostics, and reusable UI components to a host app with minimal setup. Public API types use the `BeezKit` prefix, while Modifier extensions use the compact `bk` prefix.
 
-> Status: project foundation. The modules below are scaffolded; public APIs are not implemented yet.
+> Status: early development. Throttle is available experimentally; the other modules are scaffolded only.
 
 ## Libraries
 
 | Category | Library | Artifact | Status | Specification |
 | --- | --- | --- | --- | --- |
-| Toolkit | Throttle | `io.github.beez:throttle` | Planned | [Details](docs/modules/throttle.md) |
+| Toolkit | Throttle | `io.github.beez:throttle` | Experimental | [Details](docs/modules/throttle.md) |
 | Toolkit | Stack trace | `io.github.beez:stacktrace` | Planned | [Details](docs/modules/stacktrace.md) |
 | Toolkit | Measure | `io.github.beez:measure` | Planned | [Details](docs/modules/measure.md) |
 | Debug | Inspector Core | `io.github.beez:inspector-core` | Planned | [Details](docs/modules/inspector.md) |
@@ -37,7 +37,7 @@ Modifier.bkSkeleton(visible = isLoading)
 Modifier.bkTooltip("Edit your profile here")
 ```
 
-These snippets describe the target API and do not compile until their modules are implemented.
+The throttle snippet is available now. The remaining snippets describe target APIs and do not compile until their modules are implemented.
 
 ## Project layout
 
@@ -54,7 +54,7 @@ See [architecture](docs/architecture.md) for module boundaries and design rules,
 
 ## Build
 
-Install Android SDK 37, use JDK 17 or newer, and run:
+Install Android SDK 36, use JDK 17 or newer, and run:
 
 ```shell
 ./gradlew build
