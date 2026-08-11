@@ -56,8 +56,8 @@ jobs:
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v6
 
-      - name: Install Android SDK 37
-        run: sdkmanager "platforms;android-37" "build-tools;36.0.0"
+      - name: Install Android SDK 36
+        run: sdkmanager "platforms;android-36" "build-tools;36.0.0"
 
       - name: Run tests
         run: ./gradlew --no-daemon --stacktrace test
