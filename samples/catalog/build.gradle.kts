@@ -11,9 +11,11 @@ dependencies {
     implementation(project(":toolkit:stacktrace"))
     implementation(project(":toolkit:measure"))
     debugImplementation(project(":toolkit:inspector:core"))
+    debugImplementation(project(":toolkit:inspector:network"))
+    debugImplementation(project(":toolkit:inspector:event"))
+    debugImplementation(project(":toolkit:inspector:webview"))
     implementation(project(":components:toast"))
     implementation(project(":components:snackbar"))
     implementation(project(":components:tooltip"))
     implementation(project(":components:skeleton"))
 }
-

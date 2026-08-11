@@ -50,7 +50,7 @@ docs/modules/  모듈별 기준 스펙
 .agents/skills 저장소 전용 Codex 작업 절차
 ```
 
-모듈 경계와 설계 원칙은 [아키텍처 문서](docs/architecture.md)를 참고하세요.
+모듈 경계와 설계 원칙은 [아키텍처 문서](docs/architecture.md), 샘플 등록과 화면 구성 규칙은 [카탈로그 문서](docs/sample-catalog.md)를 참고하세요.
 
 ## 빌드
 
@@ -61,4 +61,3 @@ Android SDK 37과 JDK 17 이상을 설치한 뒤 실행합니다.
 ```
 
 컴포넌트 카탈로그 애플리케이션은 `:samples:catalog`에서 확인할 수 있습니다.
-

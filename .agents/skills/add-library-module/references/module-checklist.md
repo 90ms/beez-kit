@@ -7,7 +7,8 @@
 - Optional third-party integrations are adapter modules.
 - Inspector or developer-only integrations are documented for `debugImplementation`.
 - A canonical spec and README link exist.
-- Unit tests exist once implementation begins; visual modules have a catalog destination.
+- A catalog entry contains the exact Gradle path and the catalog app depends on the module.
+- Unit tests and a real public-API sample replace Planned content once implementation begins.
 - No Activity, View, Window, WebView, or callback is retained globally.
 - Queues, histories, and payloads are bounded.
-
+- README and catalog maturity states agree.
