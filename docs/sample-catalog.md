@@ -60,4 +60,3 @@ README와 카탈로그의 상태는 같은 변경에서 함께 갱신한다.
 ## 검증
 
 로컬에서는 링크, registry, Gradle wiring과 스킬 구조만 정적으로 검사한다. Gradle build, test, lint와 APK assemble은 GitHub Actions에서만 실행한다.
-

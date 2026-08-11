@@ -27,4 +27,3 @@ internal data class BeezKitCatalogEntry(
     val status: BeezKitModuleStatus,
     val content: @Composable () -> Unit,
 )
-

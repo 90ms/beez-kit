@@ -194,4 +194,3 @@ private fun StatusLabel(status: BeezKitModuleStatus) {
         )
     }
 }
-

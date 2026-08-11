@@ -74,4 +74,3 @@ jobs:
             **/build/reports/
             **/build/test-results/
           if-no-files-found: ignore
-
