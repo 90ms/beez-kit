@@ -4,14 +4,14 @@
 
 BeezKit is a Compose-first Android toolkit for adding small utilities, diagnostics, and reusable UI components to a host app with minimal setup. Public API types use the `BeezKit` prefix, while Modifier extensions use the compact `bk` prefix.
 
-> Status: early development. Throttle and Measure are available experimentally; the other modules are scaffolded only.
+> Status: early development. Throttle, Stack Trace, and Measure are available experimentally; the other modules are scaffolded only.
 
 ## Libraries
 
 | Category | Library | Artifact | Status | Specification |
 | --- | --- | --- | --- | --- |
 | Toolkit | Throttle | `io.github.beez:throttle` | Experimental | [Details](docs/modules/throttle.md) |
-| Toolkit | Stack trace | `io.github.beez:stacktrace` | Planned | [Details](docs/modules/stacktrace.md) |
+| Toolkit | Stack trace | `io.github.beez:stacktrace` | Experimental | [Details](docs/modules/stacktrace.md) |
 | Toolkit | Measure | `io.github.beez:measure` | Experimental | [Details](docs/modules/measure.md) |
 | Debug | Inspector Core | `io.github.beez:inspector-core` | Planned | [Details](docs/modules/inspector.md) |
 | Debug | Inspector Network | `io.github.beez:inspector-network` | Planned | [Details](docs/modules/inspector.md#network-collector) |
@@ -37,7 +37,7 @@ Modifier.bkSkeleton(visible = isLoading)
 Modifier.bkTooltip("Edit your profile here")
 ```
 
-The throttle and Measure snippets are available now. The remaining snippets describe target APIs and do not compile until their modules are implemented.
+The Throttle, Stack Trace, and Measure snippets are available now. The remaining snippets describe target APIs and do not compile until their modules are implemented.
 
 ## Project layout
 
