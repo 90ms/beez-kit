@@ -19,12 +19,14 @@ internal val beezKitCatalogEntries: List<BeezKitCatalogEntry> = listOf(
         description = "값과 함께 호출 지점까지의 유효한 스택 프레임을 기록합니다.",
         category = BeezKitCatalogCategory.Toolkit,
     ),
-    plannedEntry(
+    BeezKitCatalogEntry(
         id = "measure",
         modulePath = ":toolkit:measure",
         title = "Measure",
         description = "코드 구간의 실행 시간을 안전하게 측정하고 결과를 수집합니다.",
         category = BeezKitCatalogCategory.Toolkit,
+        status = BeezKitModuleStatus.Experimental,
+        content = { MeasureCatalogSample() },
     ),
     plannedEntry(
         id = "inspector-core",
