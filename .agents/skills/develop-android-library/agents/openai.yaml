@@ -1,0 +1,4 @@
+interface:
+  display_name: "Develop Android Library"
+  short_description: "Implement or extend a BeezKit Android library module"
+  default_prompt: "Use $develop-android-library to implement or extend a BeezKit module safely."

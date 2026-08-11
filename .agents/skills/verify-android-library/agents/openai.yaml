@@ -1,0 +1,4 @@
+interface:
+  display_name: "Verify Android Library"
+  short_description: "Validate BeezKit API, safety, docs, and builds"
+  default_prompt: "Use $verify-android-library to review and verify a BeezKit module."
