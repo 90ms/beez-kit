@@ -79,12 +79,14 @@ internal val beezKitCatalogEntries: List<BeezKitCatalogEntry> = listOf(
         description = "화면 경계를 고려하는 anchor 기반 Tooltip을 제공합니다.",
         category = BeezKitCatalogCategory.Component,
     ),
-    plannedEntry(
+    BeezKitCatalogEntry(
         id = "skeleton",
         modulePath = ":components:skeleton",
         title = "Skeleton",
         description = "Composable의 형태를 유지하는 로딩 상태와 화면용 primitive를 제공합니다.",
         category = BeezKitCatalogCategory.Component,
+        status = BeezKitModuleStatus.Experimental,
+        content = { SkeletonCatalogSample() },
     ),
 )
 
