@@ -4,7 +4,7 @@
 
 BeezKit은 호스트 앱에 작은 유틸리티, 진단 도구, 재사용 가능한 UI 컴포넌트를 최소한의 설정으로 추가하기 위한 Compose 중심 Android 툴킷입니다. 공개 API 타입에는 `BeezKit` 접두사를, Modifier 확장 함수에는 간결한 `bk` 접두사를 사용합니다.
 
-> 현재 상태: 초기 개발 단계입니다. 쓰로틀링, 스택 트레이스와 함수 시간 측정 모듈은 실험적으로 사용할 수 있으며 나머지 모듈은 기본 골격만 준비되어 있습니다.
+> 현재 상태: 초기 개발 단계입니다. 쓰로틀링, 스택 트레이스, 함수 시간 측정과 Skeleton 모듈은 실험적으로 사용할 수 있으며 나머지 모듈은 기본 골격만 준비되어 있습니다.
 
 ## 제공 라이브러리
 
@@ -20,9 +20,9 @@ BeezKit은 호스트 앱에 작은 유틸리티, 진단 도구, 재사용 가능
 | 컴포넌트 | Toast | `io.github.beez:toast` | 예정 | [상세](docs/modules/toast.md) |
 | 컴포넌트 | Snackbar | `io.github.beez:snackbar` | 예정 | [상세](docs/modules/snackbar.md) |
 | 컴포넌트 | Tooltip | `io.github.beez:tooltip` | 예정 | [상세](docs/modules/tooltip.md) |
-| 컴포넌트 | Skeleton | `io.github.beez:skeleton` | 예정 | [상세](docs/modules/skeleton.md) |
+| 컴포넌트 | Skeleton | `io.github.beez:skeleton` | 실험적 | [한국어](docs/modules/skeleton.md) · [English](docs/modules/skeleton.en.md) |
 
-## 목표 API
+## 주요 API
 
 BeezKit은 기본 사용법은 한 줄로 끝내고, 필요한 경우에만 옵션을 추가하는 API를 지향합니다.
 
@@ -37,7 +37,19 @@ Modifier.bkSkeleton(visible = isLoading)
 Modifier.bkTooltip("여기에서 프로필을 수정할 수 있어요")
 ```
 
-쓰로틀링, 스택 트레이스와 함수 시간 측정 예제는 현재 사용할 수 있습니다. 나머지 코드는 목표 API이며 해당 모듈이 구현되기 전까지 컴파일되지 않습니다.
+쓰로틀링, 스택 트레이스, 함수 시간 측정과 Skeleton 예제는 현재 사용할 수 있습니다. 나머지 코드는 목표 API이며 해당 모듈이 구현되기 전까지 컴파일되지 않습니다.
+
+## Skeleton 시작하기
+
+```kotlin
+dependencies {
+    implementation("io.github.beez:skeleton:<version>")
+}
+```
+
+단일 컴포넌트에는 `Modifier.bkSkeleton`, 여러 placeholder가 함께 움직이는 영역에는 `BeezKitSkeletonScope`, 실제 화면과 별도의 로딩 레이아웃을 전환할 때는 `BeezKitSkeletonContainer`를 사용합니다.
+
+상태 관리, 애니메이션, 스타일, 최소 표시 시간, 접근성과 생명주기 동작은 [한국어 상세 문서](docs/modules/skeleton.md)에서 확인할 수 있습니다. [English specification](docs/modules/skeleton.en.md)도 함께 제공합니다.
 
 ## 프로젝트 구조
 

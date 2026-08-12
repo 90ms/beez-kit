@@ -8,7 +8,7 @@ android.namespace = "io.github.beez.beezkit.skeleton"
 dependencies {
     api(platform(libs.compose.bom))
     api(libs.compose.ui)
+    implementation(libs.compose.animation)
     implementation(libs.compose.foundation)
     testImplementation(libs.junit4)
 }
-

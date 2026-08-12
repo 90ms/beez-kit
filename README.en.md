@@ -4,7 +4,7 @@
 
 BeezKit is a Compose-first Android toolkit for adding small utilities, diagnostics, and reusable UI components to a host app with minimal setup. Public API types use the `BeezKit` prefix, while Modifier extensions use the compact `bk` prefix.
 
-> Status: early development. Throttle, Stack Trace, and Measure are available experimentally; the other modules are scaffolded only.
+> Status: early development. Throttle, Stack Trace, Measure, and Skeleton are available experimentally; the other modules are scaffolded only.
 
 ## Libraries
 
@@ -20,9 +20,9 @@ BeezKit is a Compose-first Android toolkit for adding small utilities, diagnosti
 | Component | Toast | `io.github.beez:toast` | Planned | [Details](docs/modules/toast.md) |
 | Component | Snackbar | `io.github.beez:snackbar` | Planned | [Details](docs/modules/snackbar.md) |
 | Component | Tooltip | `io.github.beez:tooltip` | Planned | [Details](docs/modules/tooltip.md) |
-| Component | Skeleton | `io.github.beez:skeleton` | Planned | [Details](docs/modules/skeleton.md) |
+| Component | Skeleton | `io.github.beez:skeleton` | Experimental | [English](docs/modules/skeleton.en.md) · [한국어](docs/modules/skeleton.md) |
 
-## Intended API
+## Main APIs
 
 BeezKit aims for a one-line default path with optional configuration only when needed.
 
@@ -37,7 +37,19 @@ Modifier.bkSkeleton(visible = isLoading)
 Modifier.bkTooltip("Edit your profile here")
 ```
 
-The Throttle, Stack Trace, and Measure snippets are available now. The remaining snippets describe target APIs and do not compile until their modules are implemented.
+The Throttle, Stack Trace, Measure, and Skeleton snippets are available now. The remaining snippets describe target APIs and do not compile until their modules are implemented.
+
+## Getting started with Skeleton
+
+```kotlin
+dependencies {
+    implementation("io.github.beez:skeleton:<version>")
+}
+```
+
+Use `Modifier.bkSkeleton` for one component, `BeezKitSkeletonScope` for a region whose placeholders should animate together, and `BeezKitSkeletonContainer` to switch between a dedicated loading layout and real screen content.
+
+See the [English specification](docs/modules/skeleton.en.md) for state ownership, animation, styling, minimum visibility, accessibility, and lifecycle behavior. A [Korean specification](docs/modules/skeleton.md) is also available.
 
 ## Project layout
 
