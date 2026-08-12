@@ -1,5 +1,7 @@
 # Stack Trace
 
+[한국어](stacktrace.md) | [English](stacktrace.en.md)
+
 **Module:** `:toolkit:stacktrace`  
 **Artifact:** `io.github.beez:stacktrace`  
 **Status:** Experimental
@@ -7,6 +9,20 @@
 ## 목적
 
 현재 코드가 어떤 호출 경로를 거쳐 실행됐는지 제한된 값과 함께 수집한다. 일반 로깅이나 예외 처리를 대체하지 않으며 중복 호출, 예상하지 못한 상태 변경, Navigation과 lifecycle 경로 진단에 사용한다.
+
+## 설치
+
+```kotlin
+dependencies {
+    implementation("io.github.beez:stacktrace:<version>")
+}
+```
+
+개발·진단 용도로만 사용할 경우 호스트 앱에서 `debugImplementation`으로 제한할 수 있다.
+
+```kotlin
+debugImplementation("io.github.beez:stacktrace:<version>")
+```
 
 ## 기본 API
 

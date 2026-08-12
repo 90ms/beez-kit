@@ -10,9 +10,9 @@ BeezKit은 호스트 앱에 작은 유틸리티, 진단 도구, 재사용 가능
 
 | 분류 | 라이브러리 | 아티팩트 | 상태 | 상세 스펙 |
 | --- | --- | --- | --- | --- |
-| 툴킷 | 쓰로틀링 | `io.github.beez:throttle` | 실험적 | [상세](docs/modules/throttle.md) |
-| 툴킷 | 스택 트레이스 | `io.github.beez:stacktrace` | 실험적 | [상세](docs/modules/stacktrace.md) |
-| 툴킷 | 함수 시간 측정 | `io.github.beez:measure` | 실험적 | [상세](docs/modules/measure.md) |
+| 툴킷 | 쓰로틀링 | `io.github.beez:throttle` | 실험적 | [한국어](docs/modules/throttle.md) · [English](docs/modules/throttle.en.md) |
+| 툴킷 | 스택 트레이스 | `io.github.beez:stacktrace` | 실험적 | [한국어](docs/modules/stacktrace.md) · [English](docs/modules/stacktrace.en.md) |
+| 툴킷 | 함수 시간 측정 | `io.github.beez:measure` | 실험적 | [한국어](docs/modules/measure.md) · [English](docs/modules/measure.en.md) |
 | 디버그 | Inspector Core | `io.github.beez:inspector-core` | 예정 | [상세](docs/modules/inspector.md) |
 | 디버그 | Inspector Network | `io.github.beez:inspector-network` | 예정 | [상세](docs/modules/inspector.md#network-collector) |
 | 디버그 | Inspector Event | `io.github.beez:inspector-event` | 예정 | [상세](docs/modules/inspector.md#event-collector) |
@@ -38,6 +38,8 @@ Modifier.bkTooltip("여기에서 프로필을 수정할 수 있어요")
 ```
 
 쓰로틀링, 스택 트레이스, 함수 시간 측정과 Skeleton 예제는 현재 사용할 수 있습니다. 나머지 코드는 목표 API이며 해당 모듈이 구현되기 전까지 컴파일되지 않습니다.
+
+구현된 모듈의 상세 문서는 한국어를 기본으로 하며, 각 문서 상단과 라이브러리 표에서 동일한 범위의 영문 문서로 전환할 수 있습니다.
 
 ## Skeleton 시작하기
 
