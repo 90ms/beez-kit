@@ -1,5 +1,7 @@
 # Measure
 
+[한국어](measure.md) | [English](measure.en.md)
+
 **Module:** `:toolkit:measure`  
 **Artifact:** `io.github.beez:measure`  
 **Status:** Experimental
@@ -7,6 +9,16 @@
 ## 목적
 
 코드 블록 또는 분리된 시작점과 종료점 사이의 경과 시간을 측정한다. 측정 기능은 호스트 앱의 반환값, 예외, 취소 및 실행 흐름을 변경하지 않는다.
+
+## 설치
+
+```kotlin
+dependencies {
+    implementation("io.github.beez:measure:<version>")
+}
+```
+
+개발 빌드에서만 성능 진단이 필요하면 `debugImplementation`을 사용할 수 있다. 릴리스에도 포함하는 경우 `enabled`와 reporter 정책을 명시적으로 설정한다.
 
 ## 기본 API
 

@@ -10,9 +10,9 @@ BeezKit is a Compose-first Android toolkit for adding small utilities, diagnosti
 
 | Category | Library | Artifact | Status | Specification |
 | --- | --- | --- | --- | --- |
-| Toolkit | Throttle | `io.github.beez:throttle` | Experimental | [Details](docs/modules/throttle.md) |
-| Toolkit | Stack trace | `io.github.beez:stacktrace` | Experimental | [Details](docs/modules/stacktrace.md) |
-| Toolkit | Measure | `io.github.beez:measure` | Experimental | [Details](docs/modules/measure.md) |
+| Toolkit | Throttle | `io.github.beez:throttle` | Experimental | [English](docs/modules/throttle.en.md) · [한국어](docs/modules/throttle.md) |
+| Toolkit | Stack trace | `io.github.beez:stacktrace` | Experimental | [English](docs/modules/stacktrace.en.md) · [한국어](docs/modules/stacktrace.md) |
+| Toolkit | Measure | `io.github.beez:measure` | Experimental | [English](docs/modules/measure.en.md) · [한국어](docs/modules/measure.md) |
 | Debug | Inspector Core | `io.github.beez:inspector-core` | Planned | [Details](docs/modules/inspector.md) |
 | Debug | Inspector Network | `io.github.beez:inspector-network` | Planned | [Details](docs/modules/inspector.md#network-collector) |
 | Debug | Inspector Event | `io.github.beez:inspector-event` | Planned | [Details](docs/modules/inspector.md#event-collector) |
@@ -38,6 +38,8 @@ Modifier.bkTooltip("Edit your profile here")
 ```
 
 The Throttle, Stack Trace, Measure, and Skeleton snippets are available now. The remaining snippets describe target APIs and do not compile until their modules are implemented.
+
+Detailed documentation for implemented modules is Korean-first, with an equivalent English specification linked from each document header and the library table.
 
 ## Getting started with Skeleton
 
