@@ -20,9 +20,11 @@ import androidx.compose.ui.draw.drawWithCache
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Outline
+import androidx.compose.ui.graphics.Paint
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.graphics.drawscope.DrawScope
-import androidx.compose.ui.graphics.drawscope.drawOutline
+import androidx.compose.ui.graphics.drawOutline
 import androidx.compose.ui.input.pointer.PointerEventPass
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalLayoutDirection
@@ -239,7 +241,7 @@ private fun rememberBeezKitSkeletonProgress(
 }
 
 private fun DrawScope.drawSkeleton(
-    outline: androidx.compose.ui.graphics.Outline,
+    outline: Outline,
     size: androidx.compose.ui.geometry.Size,
     colors: BeezKitSkeletonColors,
     animation: BeezKitSkeletonAnimation,
@@ -247,16 +249,16 @@ private fun DrawScope.drawSkeleton(
     layoutDirectionRtl: Boolean,
 ) {
     when (animation) {
-        BeezKitSkeletonAnimation.Static -> drawOutline(outline, color = colors.base)
+        BeezKitSkeletonAnimation.Static -> drawOutlineColor(outline, colors.base)
 
         is BeezKitSkeletonAnimation.Pulse -> {
             val alpha = animation.minAlpha +
                 ((animation.maxAlpha - animation.minAlpha) * progress)
-            drawOutline(outline, color = colors.base, alpha = alpha)
+            drawOutlineColor(outline, colors.base, alpha)
         }
 
         is BeezKitSkeletonAnimation.Shimmer -> {
-            drawOutline(outline, color = colors.base)
+            drawOutlineColor(outline, colors.base)
             val vector = animation.direction.vector(animation.angleDegrees, layoutDirectionRtl)
             val travel = size.width + size.height
             val centerDistance = (-animation.widthFraction +
@@ -265,7 +267,7 @@ private fun DrawScope.drawSkeleton(
             val center = Offset(size.width / 2f, size.height / 2f) + vector * centerDistance
             val start = center - vector * halfBand
             val end = center + vector * halfBand
-            drawOutline(
+            drawOutlineBrush(
                 outline = outline,
                 brush = Brush.linearGradient(
                     colors = listOf(Color.Transparent, colors.highlight, Color.Transparent),
@@ -275,6 +277,28 @@ private fun DrawScope.drawSkeleton(
             )
         }
     }
+}
+
+private fun DrawScope.drawOutlineColor(
+    outline: Outline,
+    color: Color,
+    alpha: Float = 1f,
+) {
+    val paint = Paint().apply {
+        this.color = color
+        this.alpha = alpha
+    }
+    drawContext.canvas.drawOutline(outline, paint)
+}
+
+private fun DrawScope.drawOutlineBrush(
+    outline: Outline,
+    brush: Brush,
+    alpha: Float = 1f,
+) {
+    val paint = Paint()
+    brush.applyTo(size, paint, alpha)
+    drawContext.canvas.drawOutline(outline, paint)
 }
 
 private fun BeezKitSkeletonDirection.vector(
