@@ -6,6 +6,9 @@ on:
       - main
     paths:
       - ".github/workflows/android-validation.yml"
+      - "README.md"
+      - "README.en.md"
+      - "docs/**"
       - "settings.gradle.kts"
       - "build.gradle.kts"
       - "gradle.properties"
@@ -17,6 +20,9 @@ on:
   pull_request:
     paths:
       - ".github/workflows/android-validation.yml"
+      - "README.md"
+      - "README.en.md"
+      - "docs/**"
       - "settings.gradle.kts"
       - "build.gradle.kts"
       - "gradle.properties"
